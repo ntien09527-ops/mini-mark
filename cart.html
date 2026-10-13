@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMart - Giỏ hàng & Đặt hàng</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">MiniMart</a>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="member.html">Hội viên & Ưu đãi</a>
+            <a href="cart.html">Giỏ hàng</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Giỏ hàng của bạn</h2>
+        
+        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-top: 20px;">
+            <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                <table style="width: 100%; border-collapse: collapse; text-align: left;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #ddd;">
+                            <th style="padding: 10px;">Sản phẩm</th>
+                            <th style="padding: 10px;">Giá</th>
+                            <th style="padding: 10px;">Số lượng</th>
+                            <th style="padding: 10px;">Thành tiền</th>
+                            <th style="padding: 10px;">Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #eee;" id="row-1">
+                            <td style="padding: 10px;">Sữa tươi Vinamilk</td>
+                            <td style="padding: 10px;" id="gia-1">28000</td>
+                            <td style="padding: 10px;">
+                                <button onclick="doiSL(1, -1)">-</button>
+                                <span id="sl-1" style="padding: 0 8px;">1</span>
+                                <button onclick="doiSL(1, 1)">+</button>
+                            </td>
+                            <td style="padding: 10px; font-weight: bold; color: #d9534f;" id="thanhtien-1">28.000đ</td>
+                            <td style="padding: 10px;"><button onclick="xoaDong('row-1')" style="background: #d9534f; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer;">Xóa</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div>
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px;">
+                    <h3>Cộng giỏ hàng</h3>
+                    <p style="margin: 10px 0; display: flex; justify-content: space-between;"><span>Tạm tính:</span> <strong id="tamtinh">28.000đ</strong></p>
+                    <p style="margin: 10px 0; display: flex; justify-content: space-between;"><span>Phí giao hàng:</span> <strong>15.000đ</strong></p>
+                    <hr style="margin: 10px 0;">
+                    <p style="margin: 10px 0; display: flex; justify-content: space-between; font-size: 18px; color: #d9534f;"><span>Tổng tiền:</span> <strong id="tongtien">43.000đ</strong></p>
+                </div>
+
+                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                    <h3>Thông tin nhận hàng</h3>
+                    <div style="margin-top: 15px;">
+                        <label style="display: block; margin-bottom: 5px;">Họ tên:</label>
+                        <input type="text" id="ten" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;">
+                        
+                        <label style="display: block; margin-bottom: 5px;">Số điện thoại:</label>
+                        <input type="text" id="sdt" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 10px;">
+                        
+                        <label style="display: block; margin-bottom: 5px;">Địa chỉ:</label>
+                        <input type="text" id="diachi" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 15px;">
+                        
+                        <button class="btn" onclick="datHang()" style="width: 100%; padding: 12px;">Đặt hàng ngay</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniMart</p>
+    </footer>
+    <script src="js/cart.js"></script>
+</body>
+</html>

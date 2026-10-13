@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMart - Danh sách sản phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">MiniMart</a>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="member.html">Hội viên & Ưu đãi</a>
+            <a href="cart.html">Giỏ hàng</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Danh sách sản phẩm</h2>
+        
+        <div style="margin: 20px 0; display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="timkiem" placeholder="Tìm kiếm sản phẩm theo tên..." onkeyup="timKiemSP()" style="padding: 10px; flex: 1; min-width: 200px; border: 1px solid #ccc; border-radius: 4px;">
+            <button class="btn" onclick="loc('tatca')">Tất cả</button>
+            <button class="btn" onclick="loc('sua')">Sữa & Đồ uống</button>
+            <button class="btn" onclick="loc('raucu')">Rau củ</button>
+        </div>
+
+        <div id="product-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+            <div class="the" data-category="sua" style="background: white; padding: 15px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;">
+                <div style="height: 150px; background: #eee; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 4px;">Ảnh sữa</div>
+                <h3 class="ten-sp">Sữa tươi Vinamilk</h3>
+                <p style="color: #d9534f; font-weight: bold; margin: 10px 0;">28.000đ</p>
+                <a href="product-detail.html" class="btn" style="text-decoration: none; display: inline-block;">Xem chi tiết</a>
+            </div>
+            <div class="the" data-category="raucu" style="background: white; padding: 15px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;">
+                <div style="height: 150px; background: #eee; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 4px;">Ảnh rau</div>
+                <h3 class="ten-sp">Rau cải sạch</h3>
+                <p style="color: #d9534f; font-weight: bold; margin: 10px 0;">15.000đ</p>
+                <a href="product-detail.html" class="btn" style="text-decoration: none; display: inline-block;">Xem chi tiết</a>
+            </div>
+            <div class="the" data-category="sua" style="background: white; padding: 15px; border-radius: 6px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center;">
+                <div style="height: 150px; background: #eee; display: flex; align-items: center; justify-content: center; margin-bottom: 10px; border-radius: 4px;">Ảnh nước ngọt</div>
+                <h3 class="ten-sp">Nước ngọt Coca Cola</h3>
+                <p style="color: #d9534f; font-weight: bold; margin: 10px 0;">10.000đ</p>
+                <a href="product-detail.html" class="btn" style="text-decoration: none; display: inline-block;">Xem chi tiết</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniMart</p>
+    </footer>
+    <script src="js/products.js"></script>
+</body>
+</html>

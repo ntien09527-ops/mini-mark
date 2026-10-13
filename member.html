@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMart - Hội viên & Ưu đãi</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">MiniMart</a>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="member.html">Hội viên & Ưu đãi</a>
+            <a href="cart.html">Giỏ hàng</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div id="khu-khach" style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px;">
+            <h2>Khu vực Hội viên MiniMart</h2>
+            <p style="margin: 10px 0;">Đăng nhập hoặc đăng ký hội viên ngay để tích điểm đổi quà và nhận ưu đãi độc quyền hàng tuần!</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px;">
+                <div>
+                    <h3>Đăng nhập tài khoản</h3>
+                    <div style="margin-top: 15px;">
+                        <input type="email" id="email-dn" placeholder="Nhập email của bạn" style="width: 100%; padding: 8px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                        <input type="password" id="pass-dn" placeholder="Mật khẩu" style="width: 100%; padding: 8px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 4px;">
+                        <button class="btn" onclick="dangNhap()">Đăng nhập</button>
+                    </div>
+                </div>
+                <div>
+                    <h3>Quyền lợi hội viên</h3>
+                    <ul style="margin-top: 15px; padding-left: 20px; line-height: 1.8;">
+                        <li>Tích điểm 5% trên mỗi hóa đơn mua hàng</li>
+                        <li>Voucher giảm giá sinh nhật trị giá 50.000đ</li>
+                        <li>Miễn phí giao hàng cho đơn từ 200.000đ</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="khu-hoi-vien" style="display: none; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <h2>Xin chào, Nguyễn Văn A</h2>
+            <div style="display: flex; gap: 20px; margin: 20px 0;">
+                <div style="background: #e2f0d9; padding: 15px 25px; border-radius: 6px; text-align: center;">
+                    <p>Điểm tích lũy</p>
+                    <strong style="font-size: 24px; color: #00712d;">1.250</strong>
+                </div>
+                <div style="background: #fff2cc; padding: 15px 25px; border-radius: 6px; text-align: center;">
+                    <p>Hạng hội viên</p>
+                    <strong style="font-size: 24px; color: #b45f06;">GOLD</strong>
+                </div>
+            </div>
+            
+            <h3>Ưu đãi dành riêng cho bạn</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 15px;">
+                <div style="border: 1px dashed #00712d; padding: 15px; border-radius: 6px; background: #f9fbf8;">
+                    <h4>Giảm 20.000đ</h4>
+                    <p style="font-size: 14px; color: #666; margin-top: 5px;">Đơn hàng từ 150.000đ</p>
+                </div>
+                <div style="border: 1px dashed #00712d; padding: 15px; border-radius: 6px; background: #f9fbf8;">
+                    <h4>Voucher sinh nhật</h4>
+                    <p style="font-size: 14px; color: #666; margin-top: 5px;">Giảm 50% tối đa 50k</p>
+                </div>
+            </div>
+
+            <button class="btn" onclick="dangXuat()" style="margin-top: 25px; background: #d9534f;">Đăng xuất</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniMart</p>
+    </footer>
+    <script src="js/member.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MiniMart - Chi tiết sản phẩm</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">MiniMart</a>
+        <nav>
+            <a href="index.html">Trang chủ</a>
+            <a href="products.html">Sản phẩm</a>
+            <a href="member.html">Hội viên & Ưu đãi</a>
+            <a href="cart.html">Giỏ hàng</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+            <div style="background: #eee; height: 350px; display: flex; align-items: center; justify-content: center; border-radius: 6px;">
+                Ảnh chi tiết sản phẩm
+            </div>
+            <div>
+                <h2>Sữa tươi Vinamilk</h2>
+                <p style="color: #d9534f; font-size: 24px; font-weight: bold; margin: 15px 0;">28.000đ</p>
+                <p style="margin-bottom: 15px;">Tình trạng: Còn hàng (100 sản phẩm)</p>
+                
+                <div style="margin-bottom: 20px; display: flex; align-items: center; gap: 10px;">
+                    <span>Số lượng:</span>
+                    <button class="btn" onclick="doiSL(-1)">-</button>
+                    <span id="sl" style="font-weight: bold; font-size: 18px; padding: 0 10px;">1</span>
+                    <button class="btn" onclick="doiSL(1)">+</button>
+                </div>
+
+                <button class="btn" onclick="themVaoGio()" style="font-size: 16px; padding: 12px 25px;">Thêm vào giỏ</button>
+                
+                <div style="margin-top: 25px; border-top: 1px solid #ddd; padding-top: 15px;">
+                    <h4>Mô tả sản phẩm</h4>
+                    <p style="margin-top: 5px; color: #666;">Sữa tươi 100% nguyên chất từ các trang trại bò sữa tiêu chuẩn, cung cấp nhiều dưỡng chất thiết yếu cho cơ thể mỗi ngày.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 MiniMart</p>
+    </footer>
+    <script src="js/detail.js"></script>
+</body>
+</html>
